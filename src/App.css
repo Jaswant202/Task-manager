@@ -1,0 +1,276 @@
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  padding:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:#fff;
+  background:#800080;
+  min-height:100vh;
+}
+
+.container{
+  width:calc(100% - 40px);
+  max-width:1120px;
+  margin:25px auto;
+  padding:26px;
+  background:#800080;
+  border:3px solid #F99B24;
+  border-radius:15px;
+  box-shadow:0 8px 30px #35003570;
+}
+
+h1{
+  margin:0 0 32px;
+  padding:15px 8px;
+  background:#087CF0;
+  color:#fff;
+  text-align:center;
+  font-size:38px;
+  line-height:1.35;
+  border-radius:8px 8px 0 0;
+  border-bottom:4px solid #F99B24;
+}
+
+.add-form{
+  display:grid;
+  grid-template-columns:1.3fr .9fr .95fr .62fr;
+  gap:12px;
+  margin:0 8px 34px;
+}
+
+input,select,.add-form button{
+  width:100%;
+  min-width:0;
+  height:55px;
+  padding:10px 13px;
+  border:1px solid #F99B24;
+  border-radius:5px;
+  font-family:inherit;
+  font-size:16px;
+  color:#222;
+  background:#fff;
+}
+
+select{
+  background:#fff;
+}
+
+input:focus,select:focus{
+  outline:2px solid #087CF0;
+  border-color:#F99B24;
+}
+
+.add-form button{
+  background:#087CF0;
+  border:1px solid #087CF0;
+  color:#fff;
+  cursor:pointer;
+  font-size:17px;
+  font-weight:bold;
+}
+
+.add-form button:hover{
+  background:#005fc5;
+}
+
+.filters{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  margin:0 8px 28px;
+}
+
+.filters input,.filters select{
+  height:52px;
+  font-size:16px;
+}
+
+.filters input{
+  border-radius:5px 0 0 5px;
+}
+
+.filters select{
+  border-radius:0 5px 5px 0;
+}
+
+h2{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin:0 8px 20px;
+  color:#fff;
+  font-size:28px;
+}
+
+h2 span{
+  font-size:13px;
+  color:#fff;
+  background:#087CF0;
+  padding:7px 12px;
+  border-radius:20px;
+}
+
+.table-wrap{
+  margin:0 8px 30px;
+  overflow-x:auto;
+  border:2px solid #F99B24;
+  border-radius:5px;
+}
+
+table{
+  width:100%;
+  min-width:570px;
+  border-collapse:collapse;
+  text-align:left;
+  font-size:15px;
+}
+
+th{
+  background:#087CF0;
+  color:#fff;
+  padding:14px;
+  font-size:17px;
+  border:1px solid #4A9DFA;
+}
+
+td{
+  padding:12px 14px;
+  border:1px solid #F99B24;
+  background:#800080;
+  color:#fff;
+}
+
+tbody tr:nth-child(even) td{
+  background:#6A006A;
+  color:#fff;
+}
+
+tbody tr:hover td{
+  background:#F99B24;
+  color:#25102c;
+}
+
+.priority{
+  display:inline-block;
+  padding:6px 9px;
+  border-radius:4px;
+  font-size:12px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+.high{
+  background:#FFE0CC;
+  color:#923900;
+}
+
+.medium{
+  background:#FFF0B8;
+  color:#775000;
+}
+
+.low{
+  background:#D8F5DF;
+  color:#17652E;
+}
+
+.actions{
+  white-space:nowrap;
+}
+
+.actions button{
+  padding:7px 9px;
+  margin:2px;
+  border:0;
+  border-radius:4px;
+  color:#fff;
+  cursor:pointer;
+  font-size:12px;
+}
+
+.complete{
+  background:#087CF0;
+}
+
+.delete{
+  background:#D93636;
+}
+
+.complete:hover{
+  background:#005FC5;
+}
+.delete:hover{
+  background:#A91F1F;
+}
+.finished{
+  text-decoration:line-through;
+  opacity:.7;
+}
+.empty{
+  text-align:center;
+  padding:22px;
+  color:#fff;
+}
+footer{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  margin:0 8px;
+  padding:15px 0 0;
+  border-top:3px solid #F99B24;
+  color:#fff;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+footer span{
+  color:#F99B24;
+}
+@media(max-width:700px){
+  .container{
+    width:calc(100% - 20px);
+    margin:10px auto;
+    padding:13px;
+  }
+  h1{
+    font-size:28px;
+    margin-bottom:22px;
+  }
+  .add-form{
+    grid-template-columns:1fr 1fr;
+    margin:0 0 22px;
+  }
+  .filters{
+    grid-template-columns:1fr;
+    gap:8px;
+    margin:0 0 24px;
+  }
+  .filters input,.filters select{
+    border-radius:5px;
+  }
+  h2{
+    font-size:22px;
+    margin:0 0 15px;
+  }
+  .table-wrap{
+    margin:0 0 25px;
+  }
+  th{
+    font-size:14px;
+    padding:11px;
+  }
+  td{
+    font-size:13px;
+    padding:10px;
+  }
+  footer{
+    font-size:9px;
+  }
+}
+@media(max-width:420px){
+  .add-form{
+    grid-template-columns:1fr;
+  }
+}
